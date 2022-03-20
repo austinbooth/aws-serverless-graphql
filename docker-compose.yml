@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - .:/home/code
+      - /home/code/node_modules
+    ipc: host
